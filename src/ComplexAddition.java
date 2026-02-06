@@ -1,7 +1,21 @@
 import java.util.Scanner;
 
 class Complex {
-    
+    double real1;
+    double real2;
+    double complex1;
+    double complex2;
+    Complex(double a, double b, double c, double d){
+            real1=a;
+            real2=b;
+            complex1=c;
+            complex2=d;
+    }
+    public void AddnDisplay(){
+            double realres= real1+real2;
+            double complexres=complex1+complex2;
+            System.out.println(realres+" + "+complexres+"i");
+    }
 
     // TODO: parameterized constructor Complex(int real, int imag)
 
@@ -10,14 +24,14 @@ class Complex {
 }
 
 public class ComplexAddition {
-    
-        // TODO: Read real1, imag1
-        // TODO: Read real2, imag2
-        
-        // TODO: Create two Complex objects
-        
-        // TODO: Add them
-        
-        // TODO: Print result in "real + imagi" format (e.g., "6 + 8i")
-    
+    public static void main(String args[]){
+            Scanner sc = new Scanner(System.in);
+            double rl1=sc.nextDouble();
+            double cp1=sc.nextDouble();
+            double rl2=sc.nextDouble();
+            double cp2=sc.nextDouble();
+            Complex c1 = new Complex(rl1,rl2,cp1,cp2);
+            c1.AddnDisplay();
+    }
+
 }
